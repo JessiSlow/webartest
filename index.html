@@ -14,25 +14,24 @@
     <a-scene embedded arjs="sourceType: webcam; debugUIEnabled: false;">
 
       <!-- Eigener Pattern-Marker -->
- <a-marker preset="hiro">
+      <a-marker 
+        type="pattern" 
+        url="markers/meinMarker.patt">
 
-  <a-box
-    color="red"
-    depth="1"
-    height="1"
-    width="1"
-    position="0 0.5 0">
-  </a-box>
-</a-marker>
+        <!-- 3D-Objekt -->
+        <a-entity
+          gltf-model="url(assets/model.glb)"
+          scale="0.5 0.5 0.5"
+          position="0 0 0"
+          rotation="0 0 0">
+        </a-entity>
 
+      </a-marker>
 
       <!-- Kamera -->
       <a-entity camera></a-entity>
 
-    <a-scene
-  embedded
-  arjs="sourceType: webcam; debugUIEnabled: true;">
-
+    </a-scene>
   </body>
 </html>
 
